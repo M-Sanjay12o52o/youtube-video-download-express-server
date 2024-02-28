@@ -5,6 +5,10 @@ const app = express();
 var cors = require("cors");
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("This is a test response from the Express server!");
+});
+
 app.get("/download", async (req, res) => {
   try {
     const url = req.query.url;
